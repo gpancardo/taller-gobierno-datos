@@ -1,0 +1,941 @@
+@font-face {
+  font-family: "League Gothic";
+  src: url("fuentes/LeagueGothic.ttf") format("truetype");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Libre Franklin";
+  src: url("fuentes/LibreFranklin.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("fuentes/JosefinSans.ttf") format("truetype");
+  font-weight: 100 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Courier Prime";
+  src: url("fuentes/CourierPrime-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --noche: #0E1A4F;
+  --blanco: #FFFFFF;
+  --azul: #2440B8;
+  --cian: #19A3C8;
+  --rojo: #D6252B;
+  --amarillo: #F5C04A;
+  --tenue: #E8EFF8;
+  --linea: #B9C8DE;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+}
+
+body {
+  margin: 0;
+  background: var(--blanco);
+  color: var(--noche);
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: "League Gothic", Impact, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin: 0 0 0.5rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+code,
+pre {
+  font-family: "Courier Prime", "Courier New", monospace;
+}
+
+code {
+  background: var(--tenue);
+  padding: 0.05rem 0.3rem;
+}
+
+a {
+  color: var(--azul);
+}
+
+/* Tres barras finas, como la librea de un avión. */
+.librea {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 0 0;
+  background: var(--noche);
+}
+
+.librea span {
+  display: block;
+  height: 3px;
+  background: var(--cian);
+}
+
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: var(--noche);
+  color: var(--blanco);
+}
+
+.marca {
+  font-family: "League Gothic", Impact, sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.rotulo {
+  font-size: 1rem;
+}
+
+.paradas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  background: var(--tenue);
+  border-bottom: 2px solid var(--noche);
+}
+
+.parada-boton {
+  flex: 1 1 180px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.5rem;
+  min-height: 56px;
+  padding: 0.8rem 1rem;
+  border: 0;
+  border-right: 2px solid var(--blanco);
+  background: var(--tenue);
+  color: var(--noche);
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+}
+
+.parada-boton small {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.parada-boton.activa {
+  background: var(--azul);
+  color: var(--blanco);
+}
+
+.parada-boton:hover,
+.parada-boton:focus-visible {
+  background: var(--noche);
+  color: var(--blanco);
+}
+
+.cinta {
+  padding: 0.8rem 2rem;
+  background: var(--amarillo);
+  color: var(--noche);
+  font-weight: 700;
+}
+
+main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.parada {
+  display: none;
+}
+
+.parada.activa {
+  display: block;
+}
+
+.antetitulo {
+  margin-bottom: 0.3rem;
+  color: var(--azul);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.entrada {
+  max-width: 760px;
+  font-size: 1.2rem;
+}
+
+.nota {
+  color: #34446b;
+  font-size: 1rem;
+}
+
+.portada {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2rem;
+  min-height: 300px;
+  margin-bottom: 2rem;
+  padding: 2.5rem 3rem;
+  background: var(--noche);
+  color: var(--blanco);
+}
+
+.portada h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.portada .antetitulo {
+  color: var(--amarillo);
+}
+
+.portada .entrada {
+  color: var(--blanco);
+  margin-bottom: 0;
+}
+
+.portada code {
+  background: var(--azul);
+  color: var(--blanco);
+}
+
+/* Blanco de tiro: círculos finos y un punto rojo. */
+.blanco {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border: 2px solid var(--cian);
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.blanco span {
+  position: absolute;
+  inset: 18px;
+  border: 2px solid var(--cian);
+  border-radius: 50%;
+}
+
+.blanco span::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 2px solid var(--cian);
+  border-radius: 50%;
+}
+
+.blanco i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: var(--rojo);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blanco.pequeno {
+  width: 90px;
+  height: 90px;
+}
+
+.rejilla-dos {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.rejilla-dos.arriba {
+  margin-top: 2.5rem;
+}
+
+.tarjeta {
+  padding: 1.5rem;
+  background: var(--tenue);
+  border-left: 8px solid var(--cian);
+}
+
+.tarjeta h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.tarjeta.borde-rojo {
+  margin-top: 2rem;
+  border-left-color: var(--rojo);
+}
+
+.tablas-resumen {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.tabla-mini {
+  padding: 1rem;
+  background: var(--azul);
+  color: var(--blanco);
+}
+
+.tabla-mini strong {
+  display: block;
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: 1.6rem;
+}
+
+.tabla-mini span {
+  font-family: "Courier Prime", "Courier New", monospace;
+}
+
+.fichas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.ficha {
+  padding: 1rem;
+  background: var(--tenue);
+  border-top: 8px solid var(--azul);
+}
+
+.ficha h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.2rem;
+}
+
+.ficha .tabla-nombre {
+  color: var(--azul);
+  font-weight: 700;
+}
+
+.ficha .lleno {
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: 1rem;
+}
+
+.ficha ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: 1rem;
+}
+
+.cuadro-grande {
+  width: 100%;
+  min-height: 220px;
+  padding: 1rem;
+  border: 2px solid var(--noche);
+  background: var(--blanco);
+  color: var(--noche);
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.boton {
+  min-height: 48px;
+  padding: 0.7rem 1.4rem;
+  border: 2px solid var(--azul);
+  background: var(--azul);
+  color: var(--blanco);
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.boton:hover,
+.boton:focus-visible {
+  background: var(--noche);
+  border-color: var(--noche);
+}
+
+.boton.secundario {
+  background: var(--blanco);
+  color: var(--azul);
+}
+
+.boton.secundario:hover,
+.boton.secundario:focus-visible {
+  background: var(--tenue);
+  color: var(--noche);
+}
+
+.boton:disabled {
+  border-color: var(--linea);
+  background: var(--tenue);
+  color: #5b6a8c;
+  cursor: not-allowed;
+}
+
+.casillas {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.casilla,
+.casillas label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.casilla input,
+.casillas input {
+  width: 22px;
+  height: 22px;
+  margin-top: 0.1rem;
+  accent-color: var(--azul);
+  flex: 0 0 auto;
+}
+
+.aviso {
+  margin: 1.5rem 0;
+  padding: 1rem 1.2rem;
+  border-left: 8px solid var(--amarillo);
+  background: var(--tenue);
+  font-weight: 700;
+}
+
+.tabla-envoltura {
+  max-height: 460px;
+  overflow: auto;
+  border: 2px solid var(--noche);
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--blanco);
+}
+
+th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 0.7rem;
+  background: var(--noche);
+  color: var(--blanco);
+  font-family: "Josefin Sans", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+}
+
+td {
+  padding: 0.6rem 0.7rem;
+  border-bottom: 1px solid var(--linea);
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+tr:nth-child(even) td {
+  background: var(--tenue);
+}
+
+td.num {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.marca-si {
+  color: var(--azul);
+  font-weight: 700;
+}
+
+.marca-no {
+  color: var(--rojo);
+  font-weight: 700;
+}
+
+.respuesta {
+  display: none;
+}
+
+body.ver-respuestas .respuesta,
+body.facilitador .respuesta {
+  display: table-cell;
+}
+
+.buscador {
+  margin: 1rem 0;
+}
+
+.buscador label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.buscador input {
+  width: 100%;
+  max-width: 28rem;
+  padding: 0.6rem;
+  font: 16px "Courier Prime", monospace;
+  border: 0;
+  border-bottom: 4px solid var(--azul);
+  background: var(--tenue);
+}
+
+.numeros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.numero {
+  padding: 1.2rem;
+  background: var(--tenue);
+  border-top: 10px solid var(--noche);
+}
+
+.numero.azul {
+  background: var(--azul);
+  color: var(--blanco);
+  border-top-color: var(--cian);
+}
+
+.numero.rojo {
+  background: var(--rojo);
+  color: var(--blanco);
+  border-top-color: var(--amarillo);
+}
+
+.numero span {
+  display: block;
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.numero p {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+}
+
+.reglas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 1.5rem 0 0;
+}
+
+.regla {
+  flex: 1 1 200px;
+  min-height: 52px;
+  padding: 0.7rem 1rem;
+  border: 2px solid var(--noche);
+  border-right: 0;
+  background: var(--blanco);
+  color: var(--noche);
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.regla:last-child {
+  border-right: 2px solid var(--noche);
+}
+
+.regla.activa {
+  background: var(--noche);
+  color: var(--blanco);
+}
+
+.editor {
+  border: 2px solid var(--noche);
+  border-top: 0;
+  padding: 1rem;
+}
+
+.editor-cabecera {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+#sql {
+  width: 100%;
+  min-height: 190px;
+  padding: 1rem;
+  border: 2px solid var(--linea);
+  background: var(--noche);
+  color: var(--blanco);
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+#sql::placeholder {
+  color: #a9b7d6;
+}
+
+.mensaje {
+  display: none;
+  margin: 1rem 0;
+  padding: 1rem 1.2rem;
+  border-left: 8px solid var(--azul);
+  background: var(--tenue);
+}
+
+.mensaje.visible {
+  display: block;
+}
+
+.mensaje.error {
+  border-left-color: var(--rojo);
+  color: var(--rojo);
+  font-weight: 700;
+}
+
+.mensaje.bien {
+  border-left-color: var(--azul);
+}
+
+.esquema {
+  margin: 1.5rem 0;
+  padding: 0.9rem 1.1rem;
+  background: var(--tenue);
+}
+
+.esquema summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.esquema ul {
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: 1rem;
+}
+
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.tile {
+  padding: 1rem;
+  background: var(--tenue);
+  border-top: 10px solid var(--noche);
+}
+
+.tile.cumple {
+  border-top-color: var(--azul);
+}
+
+.tile.no-cumple {
+  border-top-color: var(--rojo);
+}
+
+.tile h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.tile .valor {
+  margin: 0;
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.tile .meta {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+}
+
+.tile .estado {
+  margin: 0.5rem 0 0;
+  font-weight: 700;
+}
+
+.tile.cumple .estado {
+  color: var(--azul);
+}
+
+.tile.no-cumple .estado {
+  color: var(--rojo);
+}
+
+.periodo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 1rem 0 2rem;
+  font-weight: 700;
+}
+
+.periodo-boton {
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--azul);
+  background: var(--blanco);
+  color: var(--azul);
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.periodo-boton.activa {
+  background: var(--azul);
+  color: var(--blanco);
+}
+
+.linaje {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.nivel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nodo {
+  flex: 1 1 220px;
+  max-width: 300px;
+  padding: 1rem;
+  background: var(--tenue);
+  border-left: 8px solid var(--azul);
+}
+
+.nodo h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.2rem;
+}
+
+.nodo .dueno {
+  color: var(--azul);
+  font-weight: 700;
+}
+
+.nodo p {
+  margin: 0.4rem 0 0;
+  font-size: 1rem;
+}
+
+.nodo.fuente {
+  border-left-color: var(--cian);
+}
+
+.nodo.regla {
+  border-left-color: var(--amarillo);
+  background: var(--noche);
+  color: var(--blanco);
+}
+
+.nodo.regla .dueno {
+  color: var(--amarillo);
+}
+
+.nodo.tablero {
+  border-left-color: var(--azul);
+  background: var(--azul);
+  color: var(--blanco);
+}
+
+.nodo.tablero .dueno {
+  color: var(--blanco);
+}
+
+.nodo.causa {
+  border-left-color: var(--rojo);
+  background: var(--rojo);
+  color: var(--blanco);
+}
+
+.nodo.causa .dueno {
+  color: var(--amarillo);
+}
+
+.flecha {
+  text-align: center;
+  color: var(--azul);
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.codigo {
+  margin: 0 0 1rem;
+  padding: 1rem;
+  overflow: auto;
+  background: var(--noche);
+  color: var(--blanco);
+  font-size: 1rem;
+  line-height: 1.6;
+  border-left: 8px solid var(--cian);
+}
+
+.conclusion {
+  margin: 1.5rem 0;
+  padding: 1.2rem;
+  background: var(--azul);
+  color: var(--blanco);
+  font-weight: 700;
+}
+
+.ejemplo {
+  padding: 1rem;
+  background: var(--blanco);
+  border-left: 8px solid var(--azul);
+}
+
+.solo-facilitador {
+  display: none;
+}
+
+body.facilitador .solo-facilitador {
+  display: block;
+}
+
+#modo-facilitador {
+  display: none;
+}
+
+body.facilitador #modo-facilitador {
+  display: block;
+}
+
+.pie {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--noche);
+  color: var(--blanco);
+}
+
+.pie p {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--amarillo);
+  outline-offset: 2px;
+}
+
+@media (max-width: 900px) {
+  main {
+    padding: 1.2rem;
+  }
+
+  .rejilla-dos,
+  .fichas,
+  .tablero,
+  .numeros,
+  .tablas-resumen {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .portada {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .portada h1 {
+    font-size: 3.5rem;
+  }
+
+  .blanco {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 620px) {
+  .rejilla-dos,
+  .fichas,
+  .tablero,
+  .numeros,
+  .tablas-resumen {
+    grid-template-columns: 1fr;
+  }
+
+  .cabecera {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
+.decision.revisar {
+  color: var(--noche);
+  font-weight: 700;
+  background: var(--amarillo);
+}

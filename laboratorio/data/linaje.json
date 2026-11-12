@@ -1,0 +1,86 @@
+{
+  "nodos": [
+    {
+      "id": "app_repartidores",
+      "nombre": "App de repartidores",
+      "dueno": "Tecnología",
+      "frase": "De aquí sale la versión de app con la que se reparte cada pedido."
+    },
+    {
+      "id": "app_clientes",
+      "nombre": "App de clientes",
+      "dueno": "Tecnología",
+      "frase": "Aquí la persona escribe su correo y su teléfono."
+    },
+    {
+      "id": "clientes",
+      "nombre": "clientes",
+      "dueno": "Atención a clientes",
+      "frase": "Tabla con una fila por persona."
+    },
+    {
+      "id": "pedidos",
+      "nombre": "pedidos",
+      "dueno": "Operaciones",
+      "frase": "Tabla con un fila por pedido."
+    },
+    {
+      "id": "regla_R4",
+      "nombre": "R4 · entrega con fecha",
+      "dueno": "Operaciones",
+      "frase": "Cuenta cuántos entregados tienen fecha."
+    },
+    {
+      "id": "regla_R1",
+      "nombre": "R1 · correo",
+      "dueno": "Atención a clientes",
+      "frase": "Cuenta cuántos correos están bien escritos."
+    },
+    {
+      "id": "regla_R2",
+      "nombre": "R2 · teléfono",
+      "dueno": "Atención a clientes",
+      "frase": "Cuenta cuántos teléfonos tienen algo."
+    },
+    {
+      "id": "tablero",
+      "nombre": "Tablero de Mariana",
+      "dueno": "Dirección",
+      "frase": "Muestra el porcentaje de cada regla."
+    }
+  ],
+  "enlaces": [
+    [
+      "app_repartidores",
+      "pedidos"
+    ],
+    [
+      "app_clientes",
+      "clientes"
+    ],
+    [
+      "clientes",
+      "regla_R1"
+    ],
+    [
+      "clientes",
+      "regla_R2"
+    ],
+    [
+      "pedidos",
+      "regla_R4"
+    ],
+    [
+      "regla_R1",
+      "tablero"
+    ],
+    [
+      "regla_R2",
+      "tablero"
+    ],
+    [
+      "regla_R4",
+      "tablero"
+    ]
+  ]
+}

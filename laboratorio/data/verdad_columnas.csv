@@ -1,0 +1,15 @@
+columna,categoria,motivo
+clientes.id,Interna,Es un identificador interno; no dice nada de la persona.
+clientes.nombre,Personal,Identifica a una persona.
+clientes.email,Personal,Permite contactar a una persona.
+clientes.telefono,Personal,Permite contactar a una persona.
+clientes.carrera,Personal,Dice qué estudia una persona concreta.
+clientes.fecha_registro,Interna,Es un dato de operación de la app.
+pedidos.id,Interna,Es un identificador interno.
+pedidos.cliente_id,Interna,Es un código interno; por sí solo no identifica a nadie.
+pedidos.fecha_pedido,Interna,Es un dato de operación.
+pedidos.fecha_entrega,Interna,Es un dato de operación.
+pedidos.estado,Interna,Es un dato de operación.
+pedidos.monto,Interna,Es un dato de operación; no es de una persona.
+pedidos.notas,Sensible,Texto libre: algunas notas revelan la salud de una persona.
+pedidos.version_app,Interna,Es un dato técnico de la app de repartidores.

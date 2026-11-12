@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laboratorio · Gobierno de datos · Antojo Campus</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="librea" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="cabecera">
+    <div class="marca">Antojo Campus</div>
+    <div class="rotulo">Taller de gobierno de datos · 70 minutos</div>
+  </header>
+
+  <nav class="paradas" aria-label="Paradas del laboratorio">
+    <button class="parada-boton activa" data-parada="1">1. Catalogar <small>12 min</small></button>
+    <button class="parada-boton" data-parada="2">2. Clasificar <small>10 min</small></button>
+    <button class="parada-boton" data-parada="3">3. Medir <small>22 min</small></button>
+    <button class="parada-boton" data-parada="4">4. Rastrear <small>12 min</small></button>
+    <button class="parada-boton" data-parada="5">5. Contar <small>10 min</small></button>
+  </nav>
+
+  <div id="modo-facilitador" class="cinta" hidden>Modo facilitador: se muestran las respuestas esperadas.</div>
+
+  <main>
+    <section id="parada-1" class="parada activa" aria-labelledby="titulo-1">
+      <div class="portada">
+        <div class="blanco" aria-hidden="true"><span></span><i></i></div>
+        <p class="antetitulo">Parada 1 · 12 minutos</p>
+        <h1 id="titulo-1">Catalogar</h1>
+        <p class="entrada">Dale esta tarea a tu agente: que abra la carpeta y escriba <code>diccionario.md</code>. Después revisa lo que dejó.</p>
+      </div>
+
+      <div class="rejilla-dos">
+        <div>
+          <h2>Qué hay en la carpeta</h2>
+          <p class="nota">Tres tablas. Todo lo demás lo escribe tu agente.</p>
+          <div id="tablas-resumen" class="tablas-resumen"></div>
+        </div>
+        <aside class="tarjeta">
+          <h2>La tarea para el agente</h2>
+          <p>Abre la carpeta <code>carpeta-estudiante</code>. Lee los tres CSV. Escribe <code>diccionario.md</code> con una ficha por columna.</p>
+          <p>Cada ficha lleva: nombre, qué guarda, tipo de dato y un ejemplo. Si algo no se puede saber, escribe <strong>por confirmar</strong>.</p>
+          <p class="nota">No dejes que invente la moneda de <code>monto</code> ni el significado de <code>version_app</code>.</p>
+        </aside>
+      </div>
+
+      <h2>Ficha por columna</h2>
+      <p class="nota">El porcentaje lleno y cinco ejemplos salen de los datos. Úsalos para revisar el diccionario.</p>
+      <div id="columnas-fichas" class="fichas"></div>
+
+      <div class="rejilla-dos arriba">
+        <div>
+          <h2>Tu diccionario</h2>
+          <p class="nota">Pega aquí el contenido de <code>diccionario.md</code>.</p>
+          <textarea id="diccionario" class="cuadro-grande" placeholder="Pega el diccionario que escribió tu agente..."></textarea>
+          <div class="acciones">
+            <button id="revisar-diccionario" class="boton">Revisar diccionario</button>
+            <span id="resumen-diccionario" class="nota"></span>
+          </div>
+        </div>
+        <aside class="tarjeta">
+          <h2>Marca lo que describió mal</h2>
+          <p class="nota">Una casilla por columna. Marca solo si la descripción está mal o inventa algo.</p>
+          <div id="casillas-diccionario" class="casillas"></div>
+        </aside>
+      </div>
+
+      <div class="solo-facilitador tarjeta borde-rojo">
+        <h2>Para el facilitador</h2>
+        <p>Los tres errores típicos: <code>monto</code> sin moneda, <code>version_app</code> que en realidad es de la app de repartidores y <code>notas</code> con datos de salud.</p>
+        <p>Un buen diccionario dice “por confirmar” en la moneda y en el significado de la versión.</p>
+      </div>
+    </section>
+
+    <section id="parada-2" class="parada" aria-labelledby="titulo-2">
+      <p class="antetitulo">Parada 2 · 10 minutos</p>
+      <h1 id="titulo-2">Clasificar</h1>
+      <p class="entrada">Tu agente propone una categoría para cada columna en <code>clasificacion.md</code>. Tú la revisas.</p>
+
+      <h2>Las columnas</h2>
+      <p class="nota">Marca las que tu agente clasificó bien. La respuesta correcta está oculta.</p>
+      <div id="tabla-columnas" class="tabla-envoltura"></div>
+      <div class="numeros">
+        <div class="numero azul">
+          <span id="num-acierto">0</span>
+          <p>columnas que acertó tu agente</p>
+        </div>
+      </div>
+      <button id="ver-respuestas" class="boton">Ver respuestas</button>
+
+      <h2>Las notas de los pedidos</h2>
+      <p class="nota">Prueba una palabra y mira cuántas notas la tienen.</p>
+      <div class="buscador">
+        <label for="buscar-nota">Buscar en las notas</label>
+        <input id="buscar-nota" type="text" placeholder="alergia">
+        <p id="resultado-busqueda" class="nota" aria-live="polite"></p>
+      </div>
+      <button id="ver-salud" class="boton">Ver notas con datos de salud</button>
+      <div id="lista-salud" class="tabla-envoltura"></div>
+
+      <div class="solo-facilitador tarjeta borde-rojo">
+        <h2>Para el facilitador</h2>
+        <p>El caso difícil es <code>notas</code>: con 50 filas casi siempre queda como Interna. Hay 105 notas de salud repartidas por todo el archivo.</p>
+      </div>
+    </section>
+
+    <section id="parada-3" class="parada" aria-labelledby="titulo-3">
+      <p class="antetitulo">Parada 3 · 22 minutos</p>
+      <h1 id="titulo-3">Medir</h1>
+      <p class="entrada">Cuatro reglas de calidad pasan a SQL. Pídele a tu agente que escriba una consulta por regla y pruébala aquí.</p>
+
+      <div class="reglas" id="selector-reglas" role="tablist" aria-label="Reglas">
+        <button class="regla activa" data-regla="R1">R1 · correo</button>
+        <button class="regla" data-regla="R2">R2 · teléfono</button>
+        <button class="regla" data-regla="R3">R3 · monto</button>
+        <button class="regla" data-regla="R4">R4 · fecha de entrega</button>
+      </div>
+
+      <div class="editor">
+        <div class="editor-cabecera">
+          <span id="regla-titulo">R1 · El correo está bien escrito</span>
+          <span id="regla-meta">Meta: 95%</span>
+        </div>
+        <textarea id="sql" spellcheck="false" placeholder="Escribe aquí la consulta. Debe devolver un solo número: el porcentaje."></textarea>
+        <div class="acciones">
+          <button id="correr-sql" class="boton">Correr</button>
+          <button id="ver-solucion" class="boton secundario" disabled>Ver solución</button>
+          <span id="reloj-solucion" class="nota"></span>
+        </div>
+      </div>
+
+      <div id="mensaje-sql" class="mensaje" role="status"></div>
+      <div id="resultado-sql" class="tabla-envoltura"></div>
+
+      <details id="esquema" class="esquema">
+        <summary>Ver tablas y columnas</summary>
+        <div id="lista-esquema"></div>
+      </details>
+
+      <h2>Tablero de las cuatro reglas</h2>
+      <p class="nota">R4 muestra por defecto los últimos 14 días. Puedes ver el periodo anterior.</p>
+      <div id="tablero" class="tablero">
+        <article class="tile" data-regla="R1">
+          <h3>R1 · correo</h3>
+          <p class="valor" id="valor-R1">—</p>
+          <p class="meta">Meta 95%</p>
+          <p class="estado" id="estado-R1">Sin dato</p>
+        </article>
+        <article class="tile" data-regla="R2">
+          <h3>R2 · teléfono</h3>
+          <p class="valor" id="valor-R2">—</p>
+          <p class="meta">Meta 95%</p>
+          <p class="estado" id="estado-R2">Sin dato</p>
+        </article>
+        <article class="tile" data-regla="R3">
+          <h3>R3 · monto</h3>
+          <p class="valor" id="valor-R3">—</p>
+          <p class="meta">Meta 99%</p>
+          <p class="estado" id="estado-R3">Sin dato</p>
+        </article>
+        <article class="tile" data-regla="R4">
+          <h3>R4 · fecha de entrega</h3>
+          <p class="valor" id="valor-R4">—</p>
+          <p class="meta" id="meta-R4">Meta 95% · últimos 14 días</p>
+          <p class="estado" id="estado-R4">Sin dato</p>
+        </article>
+      </div>
+
+      <div class="periodo" id="periodo-R4">
+        <span>Periodo de R4:</span>
+        <button class="periodo-boton activa" data-periodo="ultimos">Últimos 14 días</button>
+        <button class="periodo-boton" data-periodo="anteriores">14 días anteriores</button>
+      </div>
+
+      <div class="solo-facilitador tarjeta borde-rojo">
+        <h2>Para el facilitador</h2>
+        <p>R1 correcta: 91%. R1 ingenua: 94%. R2: 82%. R3: 99.4%. R4 últimos 14 días: 96%. R4 anteriores: 99%.</p>
+        <p>La consulta de R1 tiene que excluir doble arroba y espacios. La de R2 tiene que contar nulos y vacíos.</p>
+      </div>
+    </section>
+
+    <section id="parada-4" class="parada" aria-labelledby="titulo-4">
+      <p class="antetitulo">Parada 4 · 12 minutos</p>
+      <h1 id="titulo-4">Rastrear</h1>
+      <p class="entrada">R4 bajó. Sigue el linaje para encontrar de dónde viene la falla.</p>
+
+      <h2>El linaje</h2>
+      <p class="nota">Cada nodo tiene un dueño. La falla se persigue de la regla hacia la fuente.</p>
+      <div id="linaje" class="linaje"></div>
+
+      <h2>La consulta</h2>
+      <p class="nota">Agrupa las entregas sin fecha por día y por versión de la app. Ya está escrita.</p>
+      <pre id="consulta-linaje" class="codigo"></pre>
+      <div class="acciones">
+        <button id="correr-linaje" class="boton">Correr consulta</button>
+      </div>
+      <div id="resultado-linaje" class="tabla-envoltura"></div>
+      <div id="conclusion-linaje" class="conclusion" hidden></div>
+
+      <div class="solo-facilitador tarjeta borde-rojo">
+        <h2>Para el facilitador</h2>
+        <p>En los últimos 14 días hay 139 entregas sin fecha. 124 vienen de la versión 2.3: 89%. Antes de la 2.3 las fallas eran cerca del 1% al azar.</p>
+        <p>El dueño de <code>app_repartidores</code> es Tecnología. El dueño de la regla es Operaciones.</p>
+      </div>
+    </section>
+
+    <section id="parada-5" class="parada" aria-labelledby="titulo-5">
+      <p class="antetitulo">Parada 5 · 10 minutos</p>
+      <h1 id="titulo-5">Contar</h1>
+      <p class="entrada">Escribe un mensaje corto para Mariana, la directora. Usa los números del tablero y pide algo concreto.</p>
+
+      <div class="rejilla-dos">
+        <div>
+          <h2>Tu mensaje</h2>
+          <textarea id="mensaje-mariana" class="cuadro-grande" placeholder="Mariana: ..."></textarea>
+          <p class="nota"><span id="conteo-palabras">0</span> palabras. Menos de 120 es corto.</p>
+          <div class="acciones">
+            <button id="revisar-mensaje" class="boton">Revisar mensaje</button>
+          </div>
+          <div id="respuesta-revision" class="mensaje" role="status"></div>
+        </div>
+        <aside class="tarjeta">
+          <h2>Antes de enviar</h2>
+          <label class="casilla"><input type="checkbox" id="check-corto"> Es corto.</label>
+          <label class="casilla"><input type="checkbox" id="check-numeros"> Cada número está en el tablero.</label>
+          <label class="casilla"><input type="checkbox" id="check-peticion"> Pide algo concreto.</label>
+          <p class="nota">Marca las tres. Luego revisa el mensaje.</p>
+        </aside>
+      </div>
+
+      <div class="solo-facilitador tarjeta borde-rojo">
+        <h2>Para el facilitador</h2>
+        <p>Un mensaje posible:</p>
+        <p class="ejemplo">Mariana: el correo cumple 91% y el teléfono 82%, debajo de la meta de 95%. El monto cumple 99.4% y la fecha de entrega 96%, arriba de la meta de 95%. La fecha bajó por la versión 2.3 de la app de repartidores. ¿Puedes pedir a Tecnología que la revise esta semana?</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="blanco pequeno" aria-hidden="true"><span></span><i></i></div>
+    <p>Antojo Campus · Datos inventados para el taller. Ningún dato es de una persona real.</p>
+  </footer>
+
+  <script src="vendor/sql-wasm-binary.js"></script>
+  <script src="vendor/sql-wasm.js"></script>
+  <script src="data/datos.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

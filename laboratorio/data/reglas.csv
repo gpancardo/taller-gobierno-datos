@@ -1,0 +1,5 @@
+id,descripcion,tabla,meta,dueno
+R1,El correo está bien escrito,clientes,95,Atención a clientes
+R2,El teléfono no está vacío,clientes,95,Atención a clientes
+R3,El monto es mayor que cero,pedidos,99,Operaciones
+R4,"Si dice ""entregado"", tiene fecha de entrega",pedidos,95,Operaciones

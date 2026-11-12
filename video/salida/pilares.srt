@@ -1,0 +1,123 @@
+1
+00:00:00,091 --> 00:00:01,663
+Hoy usamos seis palabras.
+
+2
+00:00:02,121 --> 00:00:06,439
+Catálogo, metadatos, clasificación, calidad, linaje y dueño.
+
+3
+00:00:08,491 --> 00:00:10,616
+El catálogo es la lista de lo que tenemos.
+
+4
+00:00:11,074 --> 00:00:13,312
+Clientes, con mil doscientas filas.
+
+5
+00:00:13,779 --> 00:00:15,945
+Pedidos, con ocho mil quinientas.
+
+6
+00:00:17,891 --> 00:00:19,821
+Los metadatos describen a los datos.
+
+7
+00:00:20,280 --> 00:00:22,343
+Esta columna es monto, un número.
+
+8
+00:00:22,810 --> 00:00:24,034
+Lo paga el cliente.
+
+9
+00:00:24,501 --> 00:00:25,519
+¿En qué moneda?
+
+10
+00:00:25,976 --> 00:00:26,841
+No se sabe:
+
+11
+00:00:26,857 --> 00:00:27,804
+por confirmar.
+
+12
+00:00:28,824 --> 00:00:31,277
+Clasificar es decidir qué tan delicado es un dato:
+
+13
+00:00:31,232 --> 00:00:33,675
+pública, interna, personal o sensible.
+
+14
+00:00:34,133 --> 00:00:35,756
+El identificador es interno.
+
+15
+00:00:36,223 --> 00:00:37,703
+El nombre, personal.
+
+16
+00:00:38,170 --> 00:00:40,940
+Una nota con «alergia al gluten» habla de salud:
+
+17
+00:00:40,875 --> 00:00:41,616
+sensible.
+
+18
+00:00:42,691 --> 00:00:44,386
+Calidad son tres preguntas.
+
+19
+00:00:44,844 --> 00:00:45,514
+¿Está?
+
+20
+00:00:45,971 --> 00:00:47,174
+Falta el teléfono.
+
+21
+00:00:47,641 --> 00:00:48,803
+¿Está bien escrito?
+
+22
+00:00:49,260 --> 00:00:51,149
+Este correo tiene dos arrobas.
+
+23
+00:00:51,616 --> 00:00:52,327
+¿Cuadra?
+
+24
+00:00:52,784 --> 00:00:55,319
+Este pedido, entregado, no tiene fecha.
+
+25
+00:00:55,776 --> 00:00:58,608
+Cada pregunta es una regla, y se prueba con SQL.
+
+26
+00:00:59,658 --> 00:01:01,455
+El linaje es el camino del dato.
+
+27
+00:01:01,903 --> 00:01:05,493
+Nace en la app de repartidores, pasa a pedidos y llega al tablero.
+
+28
+00:01:05,960 --> 00:01:08,392
+Si algo cambia arriba, se nota abajo.
+
+29
+00:01:09,424 --> 00:01:10,873
+Cada regla tiene un dueño.
+
+30
+00:01:11,321 --> 00:01:14,358
+Si falla la del correo, le toca a Atención a clientes.
+
+31
+00:01:15,524 --> 00:01:18,500
+Seis palabras, y en el laboratorio las usas todas.
