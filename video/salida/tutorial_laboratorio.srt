@@ -1,0 +1,63 @@
+1
+00:00:00,100 --> 00:00:09,480
+Este es el laboratorio. Tiene cinco paradas, una por pestaña. Se abre con doble clic en el archivo index.html.
+
+2
+00:00:10,180 --> 00:00:18,600
+Parada 1: catalogar. Dale esta tarea a tu agente: que lea los tres archivos y escriba diccionario.md.
+
+3
+00:00:19,300 --> 00:00:25,896
+Mientras trabaja, mira aquí cada columna. Ves cuánto viene lleno y cinco ejemplos reales.
+
+4
+00:00:26,596 --> 00:00:34,584
+Cuando termine, pega su diccionario y marca lo que describió mal. Fíjate en monto, en version_app y en notas.
+
+5
+00:00:35,284 --> 00:00:43,392
+Parada 2: clasificar. Pídele al agente que escriba clasificacion.md, con una categoría por columna.
+
+6
+00:00:44,092 --> 00:00:52,656
+Revisa lo que dejó. Busca la palabra alergia: hay muchas notas. Estas diez son notas reales con datos de salud.
+
+7
+00:00:53,356 --> 00:01:00,312
+Marca las columnas que acertó. Luego mira las respuestas. ¿Puso notas como sensible?
+
+8
+00:01:01,012 --> 00:01:11,256
+Parada 3: medir. Pídele al agente la consulta de la regla 1. Pégala aquí y toca Correr. Da 94 por ciento.
+
+9
+00:01:11,956 --> 00:01:18,144
+Pero esa consulta deja pasar correos con dos arrobas. Con la corrección da 91.
+
+10
+00:01:18,844 --> 00:01:25,056
+Haz lo mismo con las otras reglas. El tablero dice en palabras si cada una cumple su meta.
+
+11
+00:01:25,756 --> 00:01:32,496
+La regla 4 muestra los últimos 14 días. Cambia el periodo para ver los 14 anteriores.
+
+12
+00:01:33,196 --> 00:01:41,280
+Parada 4: rastrear. La regla 4 bajó. Este es el camino del dato, de la app al tablero.
+
+13
+00:01:41,980 --> 00:01:49,512
+Corre la consulta. Casi todas las entregas sin fecha vienen de la versión 2.3, de la app de repartidores.
+
+14
+00:01:50,212 --> 00:01:56,976
+Parada 5: contar. Escribe un mensaje corto para Mariana, solo con números del tablero.
+
+15
+00:01:57,676 --> 00:02:03,792
+Revísalo con las tres casillas: es corto, cada número está en el tablero y pide algo concreto.
+
+16
+00:02:04,492 --> 00:02:12,528
+En cada parada haces lo mismo: dale la tarea a tu agente, revisa lo que dejó y compara. Empieza por la parada 1.

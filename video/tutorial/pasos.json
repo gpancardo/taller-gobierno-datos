@@ -1,0 +1,98 @@
+[
+ {
+  "id": "inicio",
+  "rotulo": "El laboratorio",
+  "texto": "Este es el laboratorio. Tiene cinco paradas, una por pestaña. Se abre con doble clic en el archivo index punto html.",
+  "sub": "Este es el laboratorio. Tiene cinco paradas, una por pestaña. Se abre con doble clic en el archivo index.html."
+ },
+ {
+  "id": "p1_tarea",
+  "rotulo": "1 · Catalogar",
+  "texto": "Parada uno: catalogar. Dale esta tarea a tu agente: que lea los tres archivos y escriba diccionario punto md.",
+  "sub": "Parada 1: catalogar. Dale esta tarea a tu agente: que lea los tres archivos y escriba diccionario.md."
+ },
+ {
+  "id": "p1_fichas",
+  "rotulo": "1 · Catalogar",
+  "texto": "Mientras trabaja, mira aquí cada columna. Ves cuánto viene lleno y cinco ejemplos reales.",
+  "sub": "Mientras trabaja, mira aquí cada columna. Ves cuánto viene lleno y cinco ejemplos reales."
+ },
+ {
+  "id": "p1_revisar",
+  "rotulo": "1 · Catalogar",
+  "texto": "Cuando termine, pega su diccionario y marca lo que describió mal. Fíjate en monto, en version_app y en notas.",
+  "sub": "Cuando termine, pega su diccionario y marca lo que describió mal. Fíjate en monto, en version_app y en notas."
+ },
+ {
+  "id": "p2_tarea",
+  "rotulo": "2 · Clasificar",
+  "texto": "Parada dos: clasificar. Pídele al agente que escriba clasificacion punto md, con una categoría por columna.",
+  "sub": "Parada 2: clasificar. Pídele al agente que escriba clasificacion.md, con una categoría por columna."
+ },
+ {
+  "id": "p2_notas",
+  "rotulo": "2 · Clasificar",
+  "texto": "Revisa lo que dejó. Busca la palabra alergia: hay muchas notas. Estas diez son notas reales con datos de salud.",
+  "sub": "Revisa lo que dejó. Busca la palabra alergia: hay muchas notas. Estas diez son notas reales con datos de salud."
+ },
+ {
+  "id": "p2_respuestas",
+  "rotulo": "2 · Clasificar",
+  "texto": "Marca las columnas que acertó. Luego mira las respuestas. ¿Puso notas como sensible?",
+  "sub": "Marca las columnas que acertó. Luego mira las respuestas. ¿Puso notas como sensible?"
+ },
+ {
+  "id": "p3_ingenua",
+  "rotulo": "3 · Medir",
+  "texto": "Parada tres: medir. Pídele al agente la consulta de la regla uno. Pégala aquí y toca Correr. Da noventa y cuatro por ciento.",
+  "sub": "Parada 3: medir. Pídele al agente la consulta de la regla 1. Pégala aquí y toca Correr. Da 94 por ciento."
+ },
+ {
+  "id": "p3_corregida",
+  "rotulo": "3 · Medir",
+  "texto": "Pero esa consulta deja pasar correos con dos arrobas. Con la corrección da noventa y uno.",
+  "sub": "Pero esa consulta deja pasar correos con dos arrobas. Con la corrección da 91."
+ },
+ {
+  "id": "p3_tablero",
+  "rotulo": "3 · Medir",
+  "texto": "Haz lo mismo con las otras reglas. El tablero dice en palabras si cada una cumple su meta.",
+  "sub": "Haz lo mismo con las otras reglas. El tablero dice en palabras si cada una cumple su meta."
+ },
+ {
+  "id": "p3_periodo",
+  "rotulo": "3 · Medir",
+  "texto": "La regla cuatro muestra los últimos catorce días. Cambia el periodo para ver los catorce anteriores.",
+  "sub": "La regla 4 muestra los últimos 14 días. Cambia el periodo para ver los 14 anteriores."
+ },
+ {
+  "id": "p4_linaje",
+  "rotulo": "4 · Rastrear",
+  "texto": "Parada cuatro: rastrear. La regla cuatro bajó. Este es el camino del dato, de la app al tablero.",
+  "sub": "Parada 4: rastrear. La regla 4 bajó. Este es el camino del dato, de la app al tablero."
+ },
+ {
+  "id": "p4_causa",
+  "rotulo": "4 · Rastrear",
+  "texto": "Corre la consulta. Casi todas las entregas sin fecha vienen de la versión dos punto tres, de la app de repartidores.",
+  "sub": "Corre la consulta. Casi todas las entregas sin fecha vienen de la versión 2.3, de la app de repartidores."
+ },
+ {
+  "id": "p5_mensaje",
+  "rotulo": "5 · Contar",
+  "texto": "Parada cinco: contar. Escribe un mensaje corto para Mariana, solo con números del tablero.",
+  "sub": "Parada 5: contar. Escribe un mensaje corto para Mariana, solo con números del tablero."
+ },
+ {
+  "id": "p5_revisar",
+  "rotulo": "5 · Contar",
+  "texto": "Revísalo con las tres casillas: es corto, cada número está en el tablero y pide algo concreto.",
+  "sub": "Revísalo con las tres casillas: es corto, cada número está en el tablero y pide algo concreto."
+ },
+ {
+  "id": "cierre",
+  "rotulo": "Cinco paradas",
+  "texto": "En cada parada haces lo mismo: dale la tarea a tu agente, revisa lo que dejó y compara. Empieza por la parada uno.",
+  "sub": "En cada parada haces lo mismo: dale la tarea a tu agente, revisa lo que dejó y compara. Empieza por la parada 1."
+ }
+]

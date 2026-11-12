@@ -3,3 +3,5 @@ __pycache__/
 .pytest_cache/
 video/media/
 video/salida/media/
+node_modules/
+video/salida/tutorial/

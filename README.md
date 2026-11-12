@@ -14,7 +14,7 @@ generador/            Datos inventados y reproducibles (Python estándar)
 carpeta-estudiante/   Lo que cada estudiante abre en OpenCode
 laboratorio/          Página web local con las cinco paradas (sql.js, sin servidor)
 facilitador/          Soluciones, referencias y checklist
-video/                Video de la lámina 7, "Seis palabras para hoy" (Manim + voz)
+video/                Video de la lámina 7 (Manim + voz) y video del paso a paso (capturas + voz)
 tests/                Revisan que los datos produzcan los números de las láminas
 SETUP-ESTUDIANTES.md  Instalación para mandar 2 o 3 días antes
 ```
@@ -113,6 +113,18 @@ video/render.sh
 ```
 
 El texto de cada escena está en `video/guion.md`; la narración vive en `NARRACION` dentro de `video/pilares.py`. Los números y filas que salen en pantalla son los de `carpeta-estudiante/`.
+
+### Video del paso a paso
+
+`video/salida/tutorial_laboratorio.mp4` (~2:15, con `.srt` y versión sin voz) recorre las cinco paradas con capturas reales del laboratorio. El guion está en `video/tutorial/guion.md`.
+
+```bash
+cd video/tutorial && npm install      # una vez (puppeteer-core; usa Chrome del sistema)
+node capturar.mjs                     # captura el laboratorio
+../.venv/bin/python montar.py         # voz, clips, subtítulos y mp4
+```
+
+Si cambias el laboratorio, vuelve a correr los dos últimos pasos para que el video no quede desactualizado.
 
 ## Antes del taller
 
