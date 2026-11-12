@@ -6,7 +6,7 @@ Vas a usar OpenCode Desktop. No necesitas terminal. Si algo falla, tienes un pla
 
 ## 1. Recibe tu llave
 
-El facilitador te manda una llave de OpenCode Zen con tope de gasto.
+El facilitador te manda una llave de OpenCode Go (o te invita a su equipo para que la copies tú).
 No la compartas. Solo sirve para este taller.
 
 ## 2. Instala OpenCode
@@ -31,8 +31,8 @@ No la compartas. Solo sirve para este taller.
 ## 3. Conecta tu llave
 
 1. Dentro de OpenCode, abre la paleta de comandos.
-2. Escribe `/connect` y elige **OpenCode**.
-3. Pega la llave que te mandó el facilitador.
+2. Escribe `/connect` y elige **OpenCode Go**.
+3. Pega la llave.
 4. Abre `/models` y elige **DeepSeek V4.1 Flash**.
 
 Si no ves esa opción, cierra OpenCode, vuelve a abrirlo y revisa que la llave esté bien pegada, sin espacios.
@@ -68,16 +68,13 @@ Si el agente intenta abrir archivos de otras carpetas, dile: “No salgas de est
 ## Plan B
 
 Si no logras instalar OpenCode, no te preocupes.
-Sigue la pantalla del facilitador y usa solo el laboratorio web:
-
-https://TU-USUARIO.github.io/taller-gobierno-datos/
-
-El facilitador te pasa la dirección exacta el día del taller.
-En el laboratorio haces las mismas cinco paradas, sin instalar nada.
+Sigue la pantalla del facilitador. Él te pasa los prompts en voz alta.
+Si quieres hacer las paradas por tu cuenta, abre el archivo `laboratorio/index.html` con doble clic (en Chrome, Edge o Safari).
+No necesitas internet ni instalar nada.
 
 ## Si algo no funciona
 
 - **La llave no funciona:** revisa que no tenga espacios al inicio o al final. Si sigue, avisa al facilitador.
 - **No aparece DeepSeek V4.1 Flash:** abre `/models` otra vez. Si no sale, cierra sesión y vuelve a conectar la llave.
 - **El agente quiere usar internet o salir de la carpeta:** dile “Trabaja solo con los archivos de esta carpeta”.
-- **No abre el laboratorio:** usa Chrome, Edge o Safari actualizado. Si estás en el celular, mejor usa una laptop.
+- **No abre el laboratorio:** usa Chrome, Edge o Safari actualizado, en una laptop.
